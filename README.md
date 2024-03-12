@@ -44,8 +44,11 @@ Para configurar las constantes del proyecto, sigue estos pasos:
 
 1. **Ubicación del archivo**: Navega hasta la carpeta `config` dentro de tu proyecto.
 
-    ```bash
-    cd ruta-del-proyecto/config/config.php
+    ```
+    proyecto/
+    ├── config/
+    │   └── config.php
+    └── ...
     ```
 
 2. **Editar el archivo `config.php`**: Abre el archivo `config.php` en tu editor de texto favorito.
@@ -72,6 +75,6 @@ Para configurar las constantes del proyecto, sigue estos pasos:
     - `CHARSET`: El conjunto de caracteres para la conexión con la base de datos. Generalmente es "utf8".
     - `TITLE`: El título de tu proyecto. Se utilizará en la etiqueta `<title>` de las páginas.
     - `MONEDA`: La moneda que utilizará tu tienda. Por ejemplo, "USD" para dólares estadounidenses.
-    - `CLIENT_ID`: El ID del cliente para integracion con la API de Paypal.
+    - `CLIENT_ID`: ID de cliente de la API de PayPal. Puedes obtenerlo creando una aplicación en el [sitio web de desarrolladores de PayPal](https://developer.paypal.com/).
 
 3. **Guardar cambios**: Después de editar el archivo `config.php` con tus propias configuraciones, guarda los cambios.
