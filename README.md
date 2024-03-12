@@ -59,7 +59,7 @@ Para configurar las constantes del proyecto, sigue estos pasos:
     const HOST = "localhost";
     const USER = "root";
     const PASS = "";
-    const DB = "shop";
+    const DB = "";
     const CHARSET = "charset=utf8";
     const TITLE = "SHOP";
     const MONEDA = "USD";
