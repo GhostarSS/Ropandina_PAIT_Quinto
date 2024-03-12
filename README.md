@@ -72,6 +72,6 @@ Para configurar las constantes del proyecto, sigue estos pasos:
     - `CHARSET`: El conjunto de caracteres para la conexión con la base de datos. Generalmente es "utf8".
     - `TITLE`: El título de tu proyecto. Se utilizará en la etiqueta `<title>` de las páginas.
     - `MONEDA`: La moneda que utilizará tu tienda. Por ejemplo, "USD" para dólares estadounidenses.
-    - `CLIENT_ID`: El ID del cliente para integraciones de terceros, si es necesario.
+    - `CLIENT_ID`: El ID del cliente para integracion con la API de Paypal.
 
 3. **Guardar cambios**: Después de editar el archivo `config.php` con tus propias configuraciones, guarda los cambios.
