@@ -1,5 +1,11 @@
 # Instrucciones de configuración del proyecto
 
+## Autores
+
+- Frank Sevilla
+- Richard Guach
+- Gerardo Quinaluisa
+
 ## Requisitos previos
 
 Antes de comenzar, asegúrate de tener instalados los siguientes programas:
