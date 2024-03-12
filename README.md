@@ -45,7 +45,7 @@ Para configurar las constantes del proyecto, sigue estos pasos:
 1. **Ubicación del archivo**: Navega hasta la carpeta `config` dentro de tu proyecto.
 
     ```bash
-    cd ruta/del/proyecto/config
+    cd ruta-del-proyecto/config/config.php
     ```
 
 2. **Editar el archivo `config.php`**: Abre el archivo `config.php` en tu editor de texto favorito.
