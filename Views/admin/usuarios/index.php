@@ -62,7 +62,7 @@
                     </div>
                     <div class="form-group col-lg-6 mb-2">
                         <label for="correo">Correo</label>
-                        <input id="correo" class="form-control" type="text" name="correo" placeholder="Correo Electrónico">
+                        <input id="correo" class="form-control" type="email" name="correo" placeholder="Correo Electrónico">
                     </div>
                     <div class="form-group col-lg-6 mb-2">
                         <label for="direccion">Dirección</label>

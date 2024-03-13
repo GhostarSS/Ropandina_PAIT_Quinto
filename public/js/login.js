@@ -1,5 +1,5 @@
 //LOGIN
-console.clear();
+//console.clear();
 
 const loginBtn = document.getElementById('loginForm');
 const signupBtn = document.getElementById('signup');
@@ -35,11 +35,17 @@ const btnLogin = document.querySelector("#btnLogin");
 
 //REGISTER
 const nameRegister = document.querySelector("#nameRegister");
+const surnameRegister = document.querySelector("#surnameRegister");
 const emailRegister = document.querySelector("#emailRegister");
+const addressRegister = document.querySelector("#addressRegister");
 const passwordRegister = document.querySelector("#passwordRegister");
 const btnRegister = document.querySelector("#btnRegister");
 
 document.addEventListener("DOMContentLoaded", function () {
+
+  const formLogin = document.querySelector("#formLogin"); // Asegúrate de que el formulario de login tenga este id
+  const formRegister = document.querySelector("#formRegister");
+  
   btnLogin.onclick = function (e) {
     e.preventDefault();
     if (email.value == "" || password.value == "") {
@@ -68,23 +74,28 @@ document.addEventListener("DOMContentLoaded", function () {
   };
   btnRegister.onclick = function (e) {
     e.preventDefault();
-    if (nameRegister.value == "" || emailRegister.value == "" || passwordRegister.value == "") {
-      alerta("TODO LOS CAMPOS SON REQUERIDOS", 2);
+
+    if (nameRegister.value == "" || surnameRegister.value == "" || addressRegister.value == "" || emailRegister.value == "" || passwordRegister.value == "") {
+      alerta("TODOS LOS CAMPOS SON REQUERIDOS", 2);
     } else {
       let data = new FormData();
       data.append("nombre", nameRegister.value);
+      data.append("apellido", surnameRegister.value);
+      data.append("direccion", addressRegister.value);
       data.append("email", emailRegister.value);
       data.append("clave", passwordRegister.value);
-      const url = ruta + "registro/save";
+
+      const url = ruta + "registro/save"; // Asegúrate de que 'ruta' esté definida
       const http = new XMLHttpRequest();
       http.open("POST", url, true);
       http.send(data);
+
       http.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
           const res = JSON.parse(this.responseText);
           if (res.icono == "success") {
             setTimeout(function () {
-              window.location = ruta + 'principal/address';
+              window.location = ruta + 'principal/address'; // Asegúrate de que 'ruta' esté definida
             }, 1500);
           }
           let type = res.icono == "success" ? 1 : 2;

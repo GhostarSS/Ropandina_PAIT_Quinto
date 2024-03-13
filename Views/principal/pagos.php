@@ -48,6 +48,7 @@
 
 <script src="<?php echo BASE_URL; ?>public/admin/js/jquery.min.js"></script>
 <script src="https://www.paypal.com/sdk/js?client-id=<?php echo CLIENT_ID; ?>&currency=USD"></script>
+
 <script src="<?php echo BASE_URL; ?>public/js/pagos.js"></script>
 </body>
 

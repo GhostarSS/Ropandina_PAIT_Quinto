@@ -66,9 +66,9 @@ class profile extends Controller
                 $data[$i]['productos'] .= '<li class="list-group-item">'.$productos[$j]['cantidad'] . " x " . $productos[$j]['producto'] . " ------ " . $productos[$j]['precio'].'</li>';
             }
             if ($data[$i]['proceso'] == 1) {
-                $data[$i]['estado'] =  '<span class="badge bg-warning">PENDIENTE</span>';
+                $data[$i]['estado'] =  '<span class="badge badge-success">COMPLETADO</span>';
             } else {
-                $data[$i]['estado'] =  '<span class="badge bg-success">COMPLETADO</span>';
+                $data[$i]['estado'] =  '<span class="badge bg-success">Pendiente</span>';
             }
         }
         echo json_encode($data);

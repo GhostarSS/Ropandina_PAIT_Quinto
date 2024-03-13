@@ -73,7 +73,7 @@
                             <label for="correo">Correo</label>
                             <div class="input-group">
                                 <span class="input-group-text"><i class="fas fa-envelope"></i></span>
-                                <input class="form-control" type="text" name="correo" id="correo" placeholder="Correo Electrónico">
+                                <input class="form-control" type="email" name="correo" id="correo" placeholder="Correo Electrónico">
                             </div>
                         </div>
                         <div class="col-md-12 mb-3">

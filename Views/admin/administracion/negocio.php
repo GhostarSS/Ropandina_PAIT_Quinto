@@ -73,7 +73,7 @@
                     <label for="pass_smtp">Password SMTP <span class="text-danger">*</span></label>
                     <div class="input-group">
                         <span class="input-group-text"><i class="fas fa-key"></i></span>
-                        <input class="form-control" type="text" name="pass_smtp" id="pass_smtp" value="<?php echo $data['negocio']['pass_smtp']; ?>" placeholder="Password Smtp">
+                        <input class="form-control" type="password" name="pass_smtp" id="pass_smtp" value="<?php echo $data['negocio']['pass_smtp']; ?>" placeholder="Password Smtp">
                     </div>
                 </div>
                 <div class="col-md-6 mb-3">

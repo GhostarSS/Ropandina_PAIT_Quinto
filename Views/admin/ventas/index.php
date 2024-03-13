@@ -27,7 +27,7 @@ include_once 'Views/template/header-admin.php'; ?>
                 <!-- input para buscar nombre -->
                 <div class="input-group mb-2" id="containerNombre">
                     <span class="input-group-text"><i class="fas fa-search"></i></span>
-                    <input class="form-control" type="text" id="buscarProductoNombre" placeholder="Buscar Producto" autocomplete="off">
+                    <input class="form-control" type="text" id="buscarProductoNombre" placeholder="Buscar Producto" autocomplete="on">
                 </div>
                 <span class="text-danger fw-bold mb-2" id="errorBusqueda"></span>
                 <!-- table productos -->
@@ -59,7 +59,7 @@ include_once 'Views/template/header-admin.php'; ?>
                 <div class="input-group mb-2">
                     <input type="hidden" id="idCliente">
                     <span class="input-group-text"><i class="fas fa-search"></i></span>
-                    <input class="form-control" type="text" id="buscarCliente" placeholder="Buscar Cliente">
+                    <input class="form-control" type="text" id="buscarCliente" placeholder="Buscar Cliente" autocomplete="on">
                 </div>
                 <span class="text-danger fw-bold mb-2" id="errorCliente"></span>
 
@@ -71,7 +71,7 @@ include_once 'Views/template/header-admin.php'; ?>
                 <label>Pagar con</label>
                 <div class="input-group mb-2">
                     <span class="input-group-text"><i class="fas fa-dollar-sign"></i></span>
-                    <input class="form-control" type="text" id="pagar_con" placeholder="0.00">
+                    <input class="form-control" type="number" id="pagar_con" placeholder="0.00">
                 </div>
                 <label>Cambio</label>
                 <div class="input-group mb-2">

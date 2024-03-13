@@ -11,10 +11,10 @@ class RegistroModel extends Query{
         return $this->select($sql);
     }
 
-    public function registrar($email, $nombre, $clave, $tipo) {
-        $sql = "INSERT INTO usuarios (correo, nombre, clave, tipo) VALUES (?,?,?,?)";
-        return $this->insertar($sql, [$email, $nombre, $clave, $tipo]);
-    }
+    public function registrar($email, $nombre, $apellido, $direccion, $clave, $tipo) {
+    $sql = "INSERT INTO usuarios (correo, nombre, apellido, direccion, clave, tipo) VALUES (?, ?, ?, ?, ?, ?)";
+    return $this->insertar($sql, [$email, $nombre, $apellido, $direccion, $clave, $tipo]);
+}
 
     public function getProducto($id)
     {

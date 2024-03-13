@@ -60,7 +60,7 @@
 
                 <div id="sidebar-menu">
                     <ul>
-                        <li class="menu-title">Main</li>
+                        <li class="menu-title"> <center> Principal <center> </li>
 
                         <li>
                             <a href="<?php echo BASE_URL . 'admin/home'; ?>" class="waves-effect">

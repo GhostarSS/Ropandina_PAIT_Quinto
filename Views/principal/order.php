@@ -11,10 +11,12 @@
                         <div class="signup">
                             <h2 class="form-title" id="signup"><span>or</span>Registrarse</h2>
                             <form>
-                                <div class="form-holder">
-                                    <input type="text" name="name" id="nameRegister" class="input" placeholder="Name" required />
-                                    <input type="email" name="email" id="emailRegister" class="input" placeholder="Email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" />
-                                    <input type="password" name="password" id="passwordRegister" class="input" placeholder="Password" required minlength="8" />
+                            <div class="form-holder">
+                                    <input type="text" id="nameRegister" class="input" placeholder="Name" />    
+                                    <input type="text" id="surnameRegister" class="input" placeholder="Apellido" />          
+                                    <input type="email" id="emailRegister" class="input" placeholder="Email" />
+                                    <input type="text" id="addressRegister" class="input" placeholder="Direccion" />     
+                                    <input type="password" id="passwordRegister" class="input" placeholder="Password" />
                                 </div>
                                 <button type="submit" class="submit-btn bg-white text-dark" id="btnRegister">Registrarse</button>
                             </form>
@@ -46,44 +48,3 @@
 
 </html>
 
-<?php
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = isset($_POST['name']) ? $_POST['name'] : '';
-    $email = isset($_POST['email']) ? $_POST['email'] : '';
-    $password = isset($_POST['password']) ? $_POST['password'] : '';
-
-    $errors = [];
-
-    // Validar nombre
-    if (empty($name)) {
-        $errors['name'] = "El nombre es obligatorio.";
-    }
-
-    // Validar email
-    if (empty($email)) {
-        $errors['email'] = "El correo electrónico es obligatorio.";
-    } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        $errors['email'] = "El formato del correo electrónico no es válido.";
-    }
-
-    // Validar contraseña
-    if (empty($password)) {
-        $errors['password'] = "La contraseña es obligatoria.";
-    } elseif (strlen($password) < 8) {
-        $errors['password'] = "La contraseña debe tener al menos 8 caracteres.";
-    }
-
-    // Si no hay errores, procesar el registro
-    if (empty($errors)) {
-        // Aquí iría el código para procesar el registro, como insertar en la base de datos.
-        echo "Registro exitoso.";
-    } else {
-        // Mostrar errores
-        foreach ($errors as $error) {
-            echo "<p style='color: red;'>$error</p>";
-        }
-    }
-}
-
-?>

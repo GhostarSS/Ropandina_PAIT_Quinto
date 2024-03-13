@@ -12,12 +12,10 @@
                             <div class="signup">
                                 <h2 class="form-title" id="signup"><span>or</span>Registrarse</h2>
                                 <div class="form-holder">
-                                    <input type="text" id="nameRegister" class="input" placeholder="Name" />
-                                    
-                                    
+                                    <input type="text" id="nameRegister" class="input" placeholder="Name" />    
+                                    <input type="text" id="surnameRegister" class="input" placeholder="Apellido" />          
                                     <input type="email" id="emailRegister" class="input" placeholder="Email" />
-                                   
-                    
+                                    <input type="text" id="addressRegister" class="input" placeholder="Direccion" />     
                                     <input type="password" id="passwordRegister" class="input" placeholder="Password" />
                                 </div>
                                 <button class="submit-btn bg-white text-dark" id="btnRegister">Registrarse</button>
