@@ -4,7 +4,7 @@
     <div class="container">
         <div class="card">
             <div class="card-body">
-                <h5 class="card-title mb-5">LOGIN</h5>
+                <h5 class="card-title mb-5"><center> Registrate si aun no lo estas, Si ya tienes una cuenta Inicia Sesion </center></h5>
                 <div class="card">
                     <div class="card-body">
                         <div class="form-structor">

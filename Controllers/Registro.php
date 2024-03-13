@@ -12,11 +12,14 @@ class Registro extends Controller
             // Verificar que ninguno de los campos esté vacío
             if (empty($_POST['nombre']) || empty($_POST['apellido']) || empty($_POST['direccion']) || empty($_POST['email']) || empty($_POST['clave'])) {
                 $respuesta = ['msg' => 'Todos los campos son requeridos', 'icono' => 'warning'];
+            } elseif (preg_match('/\d/', $_POST['nombre']) || preg_match('/\d/', $_POST['apellido'])) {
+                // Verifica si 'nombre' o 'apellido' contienen números
+                $respuesta = ['msg' => 'El nombre y el apellido no deben contener números', 'icono' => 'warning'];
             } else {
                 // Limpiando y validando los datos de entrada
                 $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
-                $nombre = strip_tags($_POST['nombre']); // Usa una función más específica si es posible, según cómo definas strClean()
-                $clave = $_POST['clave']; // Considera limpiar si es necesario
+                $nombre = strip_tags($_POST['nombre']); 
+                $clave = $_POST['clave']; 
                 $apellido = strip_tags($_POST['apellido']);
                 $direccion = strip_tags($_POST['direccion']);
     
@@ -35,6 +38,7 @@ class Registro extends Controller
                     if (empty($consulta)) {
                         $data = $this->model->registrar($email, $nombre, $apellido, $direccion, $claveHash, $tipo);
                         if ($data > 0) {
+                            // Registro exitoso, actualización de sesión
                             $_SESSION['id_usuario'] = $data;
                             $_SESSION['email'] = $email;
                             $_SESSION['nombre_usuario'] = $nombre;
@@ -55,6 +59,7 @@ class Registro extends Controller
         echo json_encode($respuesta, JSON_UNESCAPED_UNICODE);
         die();
     }
+    
     
 
     //registrar pedidos

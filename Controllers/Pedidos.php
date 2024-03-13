@@ -25,9 +25,9 @@ class Pedidos extends Controller
                 $data[$i]['productos'] .= '<li class="list-group-item">'.$productos[$j]['cantidad'] . " x " . $productos[$j]['producto'] . " ------ " . $productos[$j]['precio'].'</li>';
             }
             if ($data[$i]['proceso'] == 1) {
-                $data[$i]['estado'] =  '<span class="badge badge-success">COMPLETADO</span>';
+                $data[$i]['estado'] =  '<span class="badge bg-warning">PENDIENTE</span>';
             } else {
-                $data[$i]['estado'] =  '<span class="badge badge-success">COMPLETADO</span>';
+                $data[$i]['estado'] =  '<span class="badge bg-success">COMPLETADO</span>';
             }
             $data[$i]['accion'] = '<button type="button" onclick="verDireccion('.$data[$i]['id'].')" class="btn btn-primary">Envio</button>';
         }
